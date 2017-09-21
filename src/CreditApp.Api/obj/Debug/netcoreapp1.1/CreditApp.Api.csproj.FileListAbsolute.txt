@@ -1,0 +1,11 @@
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\bin\Debug\netcoreapp1.1\CreditApp.Api.deps.json
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\bin\Debug\netcoreapp1.1\CreditApp.Api.runtimeconfig.json
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\bin\Debug\netcoreapp1.1\CreditApp.Api.runtimeconfig.dev.json
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\bin\Debug\netcoreapp1.1\CreditApp.Api.dll
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\bin\Debug\netcoreapp1.1\CreditApp.Api.pdb
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\obj\Debug\netcoreapp1.1\CreditApp.Api.csprojResolveAssemblyReference.cache
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\obj\Debug\netcoreapp1.1\CreditApp.Api.csproj.CoreCompileInputs.cache
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\obj\Debug\netcoreapp1.1\CreditApp.Api.AssemblyInfoInputs.cache
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\obj\Debug\netcoreapp1.1\CreditApp.Api.AssemblyInfo.cs
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\obj\Debug\netcoreapp1.1\CreditApp.Api.dll
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\obj\Debug\netcoreapp1.1\CreditApp.Api.pdb

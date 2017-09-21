@@ -1,0 +1,62 @@
+{
+   // Use IntelliSense to find out which attributes exist for C# debugging
+   // Use hover for the description of the existing attributes
+   // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+   "version": "0.2.0",
+   "configurations": [
+       {
+           "name": ".NET Core Launch (web)",
+           "type": "coreclr",
+           "request": "launch",
+           "preLaunchTask": "build",
+           "program": "${workspaceRoot}/src/CreditApp.Web/bin/Debug/netcoreapp1.1/CreditApp.Web.dll",
+           "args": [],
+           "cwd": "${workspaceRoot}/src/CreditApp.Web",
+           "stopAtEntry": false,
+           "launchBrowser": {
+               "enabled": true,
+               "args": "$http://localhost:5050",
+               "windows": {
+                   "command": "cmd.exe",
+                   "args": "/C start http://localhost:5050"
+               },
+               "osx": {
+                   "command": "open"
+               },
+               "linux": {
+                   "command": "xdg-open"
+               }
+           },
+           "env": {
+               "ASPNETCORE_ENVIRONMENT": "Development"
+           },
+           "sourceFileMap": {
+               "/Views": "${workspaceRoot}/src/CreditApp.Web/Views"
+           }
+       },
+        {
+            "name": ".NET Core Launch (web)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceRoot}/src/CreditApp.Api/bin/Debug/netcoreapp1.1/CreditApp.Api.dll",
+            "args": [],
+            "cwd": "${workspaceRoot}/src/CreditApp.Api",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceRoot}/src/CreditApi.Web/Views"
+            }
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ]
+}
