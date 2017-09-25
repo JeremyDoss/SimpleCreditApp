@@ -15,7 +15,7 @@ This API provides features for account creation and retrieval as well as transac
 
 ## Usage
 
-> **Note:** This API uses Swahashbuckles Swagger UI to generate interactive help documents that are viewable in the browser.
+> **Note:** This API uses Swashbuckles Swagger UI to generate interactive help documents that are viewable in the browser.
 
 Once the application is running, you can navigate to the [local swagger help pages.](http://localhost:5000/swagger)
 
