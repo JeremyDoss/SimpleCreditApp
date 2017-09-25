@@ -5,6 +5,11 @@ namespace CreditApp.Entities
 {
     public class Account
     {
+        public Account()
+        {
+
+        }
+
         public Account(string userName)
         {
             UserName = userName;

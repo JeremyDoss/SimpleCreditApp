@@ -6,6 +6,11 @@ namespace CreditApp.Entities
 {
     public class Ledger
     {
+        public Ledger()
+        {
+
+        }
+
         public Ledger(string type)
         {
             Type = type;

@@ -3212,6 +3212,9 @@
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
       "projectUniqueName": "C:\\Users\\jdoss\\Source\\Repos\\SimpleCreditApp\\SimpleCreditApp\\src\\CreditApp.Infrastructure\\CreditApp.Infrastructure.csproj",
       "projectName": "CreditApp.Infrastructure",
@@ -3253,12 +3256,6 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
-          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "2.0.0"
@@ -3266,6 +3263,12 @@
           "Microsoft.EntityFrameworkCore.Design": {
             "target": "Package",
             "version": "2.0.0"
+          },
+          "Microsoft.NETCore.App": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "2.0.0",
+            "autoReferenced": true
           },
           "Microsoft.EntityFrameworkCore.Sqlite": {
             "target": "Package",

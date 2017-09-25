@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using CreditApp.Infrastructure;
-using CreditApp.Entities;
 using Microsoft.Extensions.Logging;
 using CreditApp.Repositories.Interfaces;
 
@@ -22,36 +18,41 @@ namespace CreditApp.Api.Controllers
             _logger = logger;
         }
 
-        // GET accounts
-        [HttpGet]
-        public async Task<IActionResult> CreateTestAccount()
-        {
-            var messages = await _accounts.CreateAccountAsync("test");
-
-            return Ok(messages);
-        }
-
-        // GET accounts/5
         [HttpGet("{id}", Name = "GetAccount")]
-        public IActionResult GetAccount(int id)
+        public async Task<IActionResult> GetAccount(int id)
         {
-            var account = new
+            try
             {
-                Id = new Guid()
-            };
+                var account = await _accounts.GetAccountByIdAsync(id);
 
-            return Ok(account);
+                if (account == null)
+                    return NotFound();
+
+                return Ok(account.Id);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500);
+            }
         }
 
         [HttpPost]
-        //public async Task<IActionResult> CreateAccount()
-        public IActionResult CreateAccount()
+        public async Task<IActionResult> CreateAccount([FromBody] string userName)
         {
-            var account = new {
-                Id = new Guid()
-            };
+            try
+            {
+                var newAccount = await _accounts.CreateAccountAsync(userName);
 
-            return CreatedAtRoute(routeName: "GetAccount", routeValues: new { id = account.Id }, value: account);
+                return CreatedAtRoute(routeName: "GetAccount", routeValues: new { id = newAccount.Id }, value: newAccount);
+            }
+            catch (ArgumentException e)
+            {
+                return BadRequest(e.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500);
+            }
         }
     }
 }

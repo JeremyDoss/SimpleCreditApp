@@ -4,7 +4,6 @@ using CreditApp.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -25,11 +24,14 @@ namespace CreditApp.Repositories
         {
             try
             {
+                if (_context.Accounts.Any(a => a.UserName == userName))
+                    throw new ArgumentException($"The user name '{userName}' is already taken.");
+
                 var userAccount = new Account(userName);
 
-                await _context.AddAsync(userAccount);
+                 _context.Add(userAccount);
 
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
 
                 return userAccount;
             }

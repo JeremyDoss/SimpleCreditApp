@@ -9,6 +9,6 @@ namespace CreditApp.Repositories.Interfaces
     public interface IAccountsRepository
     {
         Task<Account> CreateAccountAsync(string userName);
-        Task<Account> GetAccountByIdAsync(int userId)
+        Task<Account> GetAccountByIdAsync(int userId);
     }
 }

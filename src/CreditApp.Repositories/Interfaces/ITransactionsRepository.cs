@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using CreditApp.Entities;
+using System.Threading.Tasks;
 
 namespace CreditApp.Repositories.Interfaces
 {
     public interface ITransactionsRepository
     {
-        bool ApplyTransaction();
+        Task<bool> RecordTransactionAsync(int userId, Transaction transaction);
     }
 }
