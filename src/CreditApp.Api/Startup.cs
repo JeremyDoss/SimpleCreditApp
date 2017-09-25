@@ -8,6 +8,7 @@ using System.IO;
 using Microsoft.EntityFrameworkCore;
 using CreditApp.Repositories.Interfaces;
 using CreditApp.Repositories;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace CreditApp.Api
 {
@@ -36,6 +37,11 @@ namespace CreditApp.Api
             // Add framework services.
             services.AddMvc();
 
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Credit API", Version = "v1" });
+            });
+
             services.AddScoped<IAccountsRepository, AccountsRepository>();
             services.AddScoped<ITransactionsRepository, TransactionsRepository>();
         }
@@ -47,6 +53,11 @@ namespace CreditApp.Api
             loggerFactory.AddDebug();
 
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Credit App V1");
+            });
         }
     }
 }

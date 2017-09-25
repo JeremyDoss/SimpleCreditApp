@@ -19,7 +19,7 @@ namespace CreditApp.Api.Controllers
             _logger = logger;
         }
 
-        [HttpGet("{id}", Name = "GetAccount")]
+        [HttpGet("{userName}", Name = "GetAccount")]
         public async Task<IActionResult> GetAccount(string userName)
         {
             try
