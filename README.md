@@ -44,3 +44,11 @@ Make a POST request to http://localhost:5000/transactions with the body:
 ### Get Service Health
 Simple make a GET request to http://localhost:5000/health.
 Returns status code 200 if API is running.
+
+## Future Plans
+
+1. Implement custom ASP identity system
+2. Add unit tests
+3. Expose API with an Angular MVC web app
+4. Add e2e tests
+5. Add custom logging
