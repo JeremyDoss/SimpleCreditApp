@@ -1,0 +1,17 @@
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\bin\Debug\netcoreapp2.0\CreditApp.Api.deps.json
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\bin\Debug\netcoreapp2.0\CreditApp.Api.runtimeconfig.json
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\bin\Debug\netcoreapp2.0\CreditApp.Api.runtimeconfig.dev.json
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\bin\Debug\netcoreapp2.0\CreditApp.Api.dll
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\bin\Debug\netcoreapp2.0\CreditApp.Entities.dll
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\bin\Debug\netcoreapp2.0\CreditApp.Infrastructure.dll
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\bin\Debug\netcoreapp2.0\CreditApp.Entities.pdb
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\bin\Debug\netcoreapp2.0\CreditApp.Infrastructure.pdb
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\obj\Debug\netcoreapp2.0\CreditApp.Api.csprojResolveAssemblyReference.cache
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\obj\Debug\netcoreapp2.0\CreditApp.Api.csproj.CoreCompileInputs.cache
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\obj\Debug\netcoreapp2.0\CreditApp.Api.AssemblyInfoInputs.cache
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\obj\Debug\netcoreapp2.0\CreditApp.Api.AssemblyInfo.cs
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\bin\Debug\netcoreapp2.0\CreditApp.Api.pdb
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\obj\Debug\netcoreapp2.0\CreditApp.Api.dll
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\obj\Debug\netcoreapp2.0\CreditApp.Api.pdb
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\bin\Debug\netcoreapp2.0\CreditApp.Repositories.dll
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Api\bin\Debug\netcoreapp2.0\CreditApp.Repositories.pdb

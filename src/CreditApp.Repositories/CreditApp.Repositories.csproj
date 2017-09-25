@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CreditApp.Entities\CreditApp.Entities.csproj" />
+    <ProjectReference Include="..\CreditApp.Infrastructure\CreditApp.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

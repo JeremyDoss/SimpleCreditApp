@@ -1,0 +1,11 @@
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Infrastructure\bin\Debug\netcoreapp2.0\CreditApp.Infrastructure.deps.json
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Infrastructure\bin\Debug\netcoreapp2.0\CreditApp.Infrastructure.dll
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Infrastructure\obj\Debug\netcoreapp2.0\CreditApp.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Infrastructure\obj\Debug\netcoreapp2.0\CreditApp.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Infrastructure\obj\Debug\netcoreapp2.0\CreditApp.Infrastructure.AssemblyInfo.cs
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Infrastructure\bin\Debug\netcoreapp2.0\CreditApp.Infrastructure.pdb
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Infrastructure\bin\Debug\netcoreapp2.0\CreditApp.Entities.dll
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Infrastructure\bin\Debug\netcoreapp2.0\CreditApp.Entities.pdb
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Infrastructure\obj\Debug\netcoreapp2.0\CreditApp.Infrastructure.dll
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Infrastructure\obj\Debug\netcoreapp2.0\CreditApp.Infrastructure.pdb
+C:\Users\jdoss\Source\Repos\SimpleCreditApp\SimpleCreditApp\src\CreditApp.Infrastructure\obj\Debug\netcoreapp2.0\CreditApp.Infrastructure.csprojResolveAssemblyReference.cache
