@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace CreditApp.Entities
@@ -13,6 +14,6 @@ namespace CreditApp.Entities
         public DateTime TimeStamp { get; set; } = DateTime.Now;
 
         public virtual Journal Journal { get; set; }
-
+        public ICollection<LedgerRecord> LedgerRecords { get; set; } = new List<LedgerRecord>();
     }
 }

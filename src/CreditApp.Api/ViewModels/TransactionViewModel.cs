@@ -10,6 +10,8 @@ namespace CreditApp.Api.ViewModels
     {
         public int Id { get; set; }
         [Required]
+        public int UserId { get; set; }
+        [Required]
         public string Type { get; set; }
         public string TimeStamp { get; set; }
         [Required]

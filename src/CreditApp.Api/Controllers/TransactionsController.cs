@@ -20,13 +20,14 @@ namespace CreditApp.Api.Controllers
             _logger = logger;
         }
 
-        public async Task<IActionResult> PostTransaction([FromBody] int userId, [FromBody] TransactionViewModel transaction)
+        [HttpPost]
+        public async Task<IActionResult> PostTransaction([FromBody] TransactionViewModel transaction)
         {
             try
             {
                 if (!ModelState.IsValid) return BadRequest(ModelState);
 
-                await _transactions.RecordTransactionAsync(userId, transaction.ToTransaction());
+                await _transactions.RecordTransactionAsync(transaction.UserId, transaction.ToTransaction());
 
                 return Ok();
             }

@@ -1,6 +1,7 @@
-﻿using CreditApp.Entities;
+﻿ using CreditApp.Entities;
 using CreditApp.Infrastructure;
 using CreditApp.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
@@ -24,16 +25,21 @@ namespace CreditApp.Repositories
 
             try
             {
-                var userJournal = _context.Accounts.FirstOrDefault(a => a.Id == userId).Journals.FirstOrDefault();
+                var userJournal = _context.Journals
+                    .Include(j => j.Ledgers)
+                    .Include(j => j.Transactions)
+                    .FirstOrDefault(j => j.AccountId == userId);
 
                 if (userJournal == null)
                     throw new ArgumentException($"User ID {userId} was not found");
 
-                transaction.JournalId = userJournal.Id;
+                //transaction.JournalId = userJournal.Id;
 
                 RecordLedgerRecordAsync(userJournal, transaction);
 
-                _context.Transactions.Add(transaction);
+                //_context.Transactions.Add(transaction);
+
+                userJournal.Transactions.Add(transaction);
 
                 await _context.SaveChangesAsync();
 
@@ -49,7 +55,7 @@ namespace CreditApp.Repositories
         {
             var cashOutLedgerRecord = new LedgerRecord {
                 LedgerId = journal.Ledgers.FirstOrDefault(l => l.Type == "cash-out").Id,
-                TransactionId = transaction.Id,
+                //TransactionId = transaction.Id,
                 Amount = transaction.Amount,
                 TimeStamp = transaction.TimeStamp
             };
@@ -57,7 +63,7 @@ namespace CreditApp.Repositories
             var principalLedgerRecord = new LedgerRecord
             {
                 LedgerId = journal.Ledgers.FirstOrDefault(l => l.Type == "principal").Id,
-                TransactionId = transaction.Id,
+                //TransactionId = transaction.Id,
                 Amount = transaction.Amount,
                 TimeStamp = transaction.TimeStamp
             };
@@ -76,8 +82,11 @@ namespace CreditApp.Repositories
                     throw new ArgumentException("Unknown transaction type");
             }
 
-            _context.LedgerRecords.Add(cashOutLedgerRecord);
-            _context.LedgerRecords.Add(principalLedgerRecord);
+            //_context.LedgerRecords.Add(cashOutLedgerRecord);
+            //_context.LedgerRecords.Add(principalLedgerRecord);
+
+            transaction.LedgerRecords.Add(cashOutLedgerRecord);
+            transaction.LedgerRecords.Add(principalLedgerRecord);
         }
     }
 }
