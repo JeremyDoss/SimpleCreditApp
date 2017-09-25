@@ -44,7 +44,7 @@ namespace CreditApp.Api.Controllers
             {
                 var newAccount = await _accounts.CreateAccountAsync(userName);
 
-                return CreatedAtRoute(routeName: "GetAccount", routeValues: new { id = newAccount.Id }, value: newAccount);
+                return Ok(value: new { newAccount.Id });
             }
             catch (ArgumentException e)
             {
