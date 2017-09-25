@@ -20,24 +20,22 @@ namespace CreditApp.Repositories
             _logger = logger;
         }
 
-        public async Task<bool> RecordTransactionAsync(int userId, Transaction transaction)
+        public async Task<bool> RecordTransactionAsync(string userName, Transaction transaction)
         {
 
             try
             {
+                var account = _context.Accounts.FirstOrDefault(a => a.UserName == userName);
+
                 var userJournal = _context.Journals
                     .Include(j => j.Ledgers)
                     .Include(j => j.Transactions)
-                    .FirstOrDefault(j => j.AccountId == userId);
+                    .FirstOrDefault(j => j.AccountId == account.Id);
 
                 if (userJournal == null)
-                    throw new ArgumentException($"User ID {userId} was not found");
-
-                //transaction.JournalId = userJournal.Id;
+                    throw new ArgumentException($"User '{userName}' was not found");
 
                 RecordLedgerRecordAsync(userJournal, transaction);
-
-                //_context.Transactions.Add(transaction);
 
                 userJournal.Transactions.Add(transaction);
 
@@ -55,7 +53,6 @@ namespace CreditApp.Repositories
         {
             var cashOutLedgerRecord = new LedgerRecord {
                 LedgerId = journal.Ledgers.FirstOrDefault(l => l.Type == "cash-out").Id,
-                //TransactionId = transaction.Id,
                 Amount = transaction.Amount,
                 TimeStamp = transaction.TimeStamp
             };
@@ -63,7 +60,6 @@ namespace CreditApp.Repositories
             var principalLedgerRecord = new LedgerRecord
             {
                 LedgerId = journal.Ledgers.FirstOrDefault(l => l.Type == "principal").Id,
-                //TransactionId = transaction.Id,
                 Amount = transaction.Amount,
                 TimeStamp = transaction.TimeStamp
             };
@@ -81,9 +77,6 @@ namespace CreditApp.Repositories
                 default:
                     throw new ArgumentException("Unknown transaction type");
             }
-
-            //_context.LedgerRecords.Add(cashOutLedgerRecord);
-            //_context.LedgerRecords.Add(principalLedgerRecord);
 
             transaction.LedgerRecords.Add(cashOutLedgerRecord);
             transaction.LedgerRecords.Add(principalLedgerRecord);

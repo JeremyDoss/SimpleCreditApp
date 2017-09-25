@@ -20,11 +20,13 @@ namespace CreditApp.Api.Controllers
         }
 
         [HttpGet("{id}", Name = "GetAccount")]
-        public async Task<IActionResult> GetAccount(int id)
+        public async Task<IActionResult> GetAccount(string userName)
         {
             try
             {
-                var account = await _accounts.GetAccountByIdAsync(id);
+                _logger.LogTrace("Accounts controller GetAccount");
+
+                var account = await _accounts.GetAccountByIdAsync(userName);
 
                 if (account == null)
                     return NotFound();
@@ -42,6 +44,8 @@ namespace CreditApp.Api.Controllers
         {
             try
             {
+                _logger.LogTrace("Accounts controller CreateAccount");
+
                 var newAccount = await _accounts.CreateAccountAsync(userName);
 
                 return Ok(value: new { newAccount.Id });

@@ -5,6 +5,6 @@ namespace CreditApp.Repositories.Interfaces
 {
     public interface ITransactionsRepository
     {
-        Task<bool> RecordTransactionAsync(int userId, Transaction transaction);
+        Task<bool> RecordTransactionAsync(string userName, Transaction transaction);
     }
 }

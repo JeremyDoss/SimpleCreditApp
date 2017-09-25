@@ -1,9 +1,6 @@
 ﻿using CreditApp.Api.ViewModels;
 using CreditApp.Entities;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace CreditApp.Api.Extensions
 {
@@ -16,7 +13,7 @@ namespace CreditApp.Api.Extensions
                 Id = entity.Id,
                 Principal = GetAccountPrincipal(entity),
                 Transactions = entity.Journals.FirstOrDefault()
-                    .Transactions.Select(t => t.ToTransactionViewModel())//GetAccountTransactions(entity)
+                    .Transactions.Select(t => t.ToTransactionViewModel())
             };
         }
 
@@ -33,14 +30,5 @@ namespace CreditApp.Api.Extensions
 
             return (principalCredit - principalDebit) ?? 0.00;
         }
-
-        //private static IEnumerable<TransactionViewModel> GetAccountTransactions(Account account)
-        //{
-        //    var transactions = account.Journals.FirstOrDefault()
-        //        .Transactions.OrderByDescending(t => t.TimeStamp)
-        //        .Select(t => t.ToTransactionViewModel());
-
-        //    return transactions;
-        //}
     }
 }

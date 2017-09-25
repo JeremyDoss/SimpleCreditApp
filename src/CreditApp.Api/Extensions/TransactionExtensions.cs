@@ -1,9 +1,5 @@
 ﻿using CreditApp.Api.ViewModels;
 using CreditApp.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CreditApp.Api.Extensions
 {

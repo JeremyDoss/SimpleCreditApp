@@ -25,9 +25,11 @@ namespace CreditApp.Api.Controllers
         {
             try
             {
+                _logger.LogTrace("Transactions controller PostTransaction");
+
                 if (!ModelState.IsValid) return BadRequest(ModelState);
 
-                await _transactions.RecordTransactionAsync(transaction.UserId, transaction.ToTransaction());
+                await _transactions.RecordTransactionAsync(transaction.UserName, transaction.ToTransaction());
 
                 return Ok();
             }

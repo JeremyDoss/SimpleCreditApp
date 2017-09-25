@@ -57,11 +57,11 @@ namespace CreditApp.Repositories
             }
         }
 
-        public async Task<Account> GetAccountByIdAsync(int userId)
+        public async Task<Account> GetAccountByIdAsync(string userName)
         {
             try
             {
-                var account = await _context.Accounts.Include(a => a.Journals).FirstOrDefaultAsync(a => a.Id == userId);
+                var account = await _context.Accounts.Include(a => a.Journals).FirstOrDefaultAsync(a => a.UserName == userName);
 
                 foreach (var journal in account.Journals)
                 {

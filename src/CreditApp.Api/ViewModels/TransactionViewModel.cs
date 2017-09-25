@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace CreditApp.Api.ViewModels
 {
@@ -10,7 +6,7 @@ namespace CreditApp.Api.ViewModels
     {
         public int Id { get; set; }
         [Required]
-        public int UserId { get; set; }
+        public string UserName { get; set; }
         [Required]
         public string Type { get; set; }
         public string TimeStamp { get; set; }
