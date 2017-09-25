@@ -3231,9 +3231,6 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
       "projectUniqueName": "C:\\Users\\jdoss\\Source\\Repos\\SimpleCreditApp\\SimpleCreditApp\\src\\CreditApp.Repositories\\CreditApp.Repositories.csproj",
       "projectName": "CreditApp.Repositories",
