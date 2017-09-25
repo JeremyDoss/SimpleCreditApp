@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CreditApp.Repositories.Interfaces;
+using CreditApp.Api.Extensions;
 
 namespace CreditApp.Api.Controllers
 {
@@ -28,7 +29,7 @@ namespace CreditApp.Api.Controllers
                 if (account == null)
                     return NotFound();
 
-                return Ok(account.Id);
+                return Ok(account.ToAccountViewModel());
             }
             catch (Exception)
             {
